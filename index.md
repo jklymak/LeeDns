@@ -17,4 +17,10 @@ These are approx 4mx4m near the Gaussian bump, and telescope out away.  There ar
   3. to run, edit `runModel.sh` and then `qsub runModel.sh`
   3. when run: `python/getSlices.py` gets complete slices.
   4. `python/getEnergy.py` gets an energy budget from the data.  Runs quicker than slices because the data is far smaller.
-   
+  5. Run something like `rsync -av /scr/jklymak/scratch/fine03/ hornby.seos.uvic.ca:LeeDns14/twoDfine/fine03/` to send back to `hornby.soes.uvic.ca`
+  6. On `hornby` run ipython notebook in `/Users/jklymak/LeeDns14/twoDcoarse/ProcessCoarse.ipynb` (so far)
+  
+## Commentary:
+
+### 9 Nov 2014: 
+The  

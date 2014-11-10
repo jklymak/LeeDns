@@ -3,49 +3,18 @@ layout: default
 title: Home
 ---
 
-# Project Template
+# Preamble:
 
-This is meant to be a documentation branch of a project.  I'll keep it in `~/Dropbox/ProjectDocs/projname`
+This is all done on `haise.navo.hpc.mil`
+# 2-d Fine runs:
 
-## Steps to setup a the code etc
+These are approx 4mx4m near the Gaussian bump, and telescope out away.  There are a few of them.  They use 128 cores.  They run at about 6x simulation time; i.e. 60 h can get done in 10 h of simulation time.  
 
-Make a [new repository](https://help.github.com/articles/create-a-repo) on [github](github.org)
+## workflow:
 
-Fetch to local
-
-    cd ~/
-    # or whereever we are putting the repository.  
-    git clone https://github.com/jklymak/newrepo.git
-    cd newrepo/
-
-edit a file and add the file
-
-    git add newfile
-
-Commit:
-
-    git commit -a -m "My new commit"
-
-Upload:
-
-    git push origin master
-
-## Steps to setup the doc directory
-
-For whatever reason github makes you create a special branch 'gh-pages' of your repository for your code to live in.  This has to be somewhere else than your code directory, which I think is a bit silly.  
-
-    cd ~/Dropbox/ProjectDocs
-    git clone https://github.com/jklymak/newrepo.git
-    # clone the code directory
-    cd newrepo/
-    git checkout --orphan gh-pages
-    git rm -rf .
-    # remove everything.
-    rm '.gitignore'
-    # now get some content for the now empty docs directoyr
-    cp -r ~/Dropbox/ProjectDocs/projecttemplate/* ~/Dropbox/ProjectDocs/newrepo
-    cd ~/Dropbox/ProjectDocs/newrepo
-    git add .
-    git commit -a -m "First pages commit"
-    git push origin gh-pages
-
+  1. edit `gendata.py` and run; remember to run `~/loadpython.sh` first to get all the modules loaded.
+  2. edit `data`; `data.obc`;
+  3. to run, edit `runModel.sh` and then `qsub runModel.sh`
+  3. when run: `python/getSlices.py` gets complete slices.
+  4. `python/getEnergy.py` gets an energy budget from the data.  Runs quicker than slices because the data is far smaller.
+   

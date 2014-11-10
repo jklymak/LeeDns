@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Home &middot; Uvic Ocean Physics
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>Uvic Ocean Physics</h1>
+      <p class="lead"></p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item active">
+        <a href="">Home</a>
+      </li>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/about/">About</a>
+            </li>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/boo/">Boo</a>
+            </li>
+          
+        
+      
+        
+          
+        
+      
+      <li class="sidebar-nav-item"><a href="/blog/">Blog</a></li>
+      <li class="sidebar-nav-item"><a href="https://github.com/jklymak/projtemplate/archive/v2.0.0.zip">Download</a></li>
+      <li class="sidebar-nav-item"><a href="https://github.com/jklymak/projtemplate">GitHub project</a></li>
+      <!--- <li class="sidebar-nav-item">Currently v2.0.0</li> -->
+    </ul>
+
+    <p>&copy; 2014. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <h1>Project Template</h1>
+
+<p>This is meant to be a documentation branch of a project.  I&#39;ll keep it in <code>~/Dropbox/ProjectDocs/projname</code></p>
+
+<h2>Steps to setup a the code etc</h2>
+
+<p>Make a <a href="https://help.github.com/articles/create-a-repo">new repository</a> on <a href="github.org">github</a></p>
+
+<p>Fetch to local</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">cd ~/
+# or whereever we are putting the repository.  
+git clone https://github.com/jklymak/newrepo.git
+cd newrepo/
+</code></pre></div>
+<p>edit a file and add the file</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">git add newfile
+</code></pre></div>
+<p>Commit:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">git commit -a -m &quot;My new commit&quot;
+</code></pre></div>
+<p>Upload:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">git push origin master
+</code></pre></div>
+<h2>Steps to setup the doc directory</h2>
+
+<p>For whatever reason github makes you create a special branch &#39;gh-pages&#39; of your repository for your code to live in.  This has to be somewhere else than your code directory, which I think is a bit silly.  </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">cd ~/Dropbox/ProjectDocs
+git clone https://github.com/jklymak/newrepo.git
+# clone the code directory
+cd newrepo/
+git checkout --orphan gh-pages
+git rm -rf .
+# remove everything.
+rm &#39;.gitignore&#39;
+# now get some content for the now empty docs directoyr
+cp -r ~/Dropbox/ProjectDocs/projecttemplate/* ~/Dropbox/ProjectDocs/newrepo
+cd ~/Dropbox/ProjectDocs/newrepo
+git add .
+git commit -a -m &quot;First pages commit&quot;
+git push origin gh-pages
+</code></pre></div>
+    </div>
+
+  </body>
+</html>

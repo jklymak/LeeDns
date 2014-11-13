@@ -6,9 +6,18 @@ title: Home
 # Preamble:
 
 This is all done on `haise.navo.hpc.mil`
+
+[Runs](./Runs.html)
+
+
 # 2-d Fine runs:
 
+
 These are approx 4mx4m near the Gaussian bump, and telescope out away.  There are a few of them.  They use 128 cores.  They run at about 6x simulation time; i.e. 60 h can get done in 10 h of simulation time.  
+
+  - `fine07`: standard run with a bit of bottom roughness: Archived! `fine07_files.tar.gz`; Stored 
+  - `fine08`: stanradr run, but considerably rougher. The goal here is to break up the laminar boundary layer that is probably aphysical *without* resorting to higher Reynold's number
+
 
 ## workflow:
 
@@ -23,4 +32,11 @@ These are approx 4mx4m near the Gaussian bump, and telescope out away.  There ar
 ## Commentary:
 
 ### 9 Nov 2014: 
-The  
+There is a relatively large difference in the `coarse` and `fine` barotropic energies.  I expect this is because they are different sized geometries.  Running `fine04` right now and if that is OK< I'll make a coarse run w/ exactly the same x limits and boundary forcing. OK, the real difference: the boundary conditions had the time wrap-around problem again.  I find that *very* annoying!   `fine05` seems to fix this.  The other `fine*` runs are basically junk at this point.
+
+# 3-D fine run(s):
+
+## Workflow
+
+Is as above, but the inital data is taken from `fine07` run.
+

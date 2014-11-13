@@ -5,8 +5,9 @@ title: Runs
 
 # Fine Runs:
 
-  - [`fine07`](./fine07.tgz)
+  Here are the archived setup files needed to re-run the runs documented here.
 
-Hmmm
+  - [`fine07.tgz` (77kb) ](./fine07.tgz)
+
 
 

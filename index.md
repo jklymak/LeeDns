@@ -7,7 +7,7 @@ title: Home
 
 This is all done on `haise.navo.hpc.mil`
 
-[Runs](./Runs.html)
+[Runs](Runs/)
 
 
 # 2-d Fine runs:
